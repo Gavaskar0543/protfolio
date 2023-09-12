@@ -27,12 +27,13 @@ export default function HomePage(){
 
             <div>
                 <h1>Gavaskar Kathirvel</h1>
-                <span>
-                   <h1>{jobTitle}</h1>
-                </span>
+               
             </div>
 
         </div>
+        <span>
+                   <h1>{jobTitle}</h1>
+                </span>
        </div>
     );
 }
