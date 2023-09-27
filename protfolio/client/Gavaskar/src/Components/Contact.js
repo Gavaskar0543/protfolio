@@ -1,6 +1,7 @@
+import styled from 'styled-components';
 function Contact(){
     return(
-       <section id="contact-section">
+       <MainDiv id="contact-section">
         <div className="text-bold my-4 d-flex align-items-center justify-content-center w-100 text-center">
             <h2>Contact Me</h2>
 
@@ -30,8 +31,12 @@ function Contact(){
            </form>
         </div>
 
-       </section>
+       </MainDiv>
     );
 }
 
+const MainDiv = styled.div`
+height:100vh;
+
+`;
 export default Contact;
