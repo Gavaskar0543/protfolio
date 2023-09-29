@@ -18,7 +18,7 @@ export default function HomePage(){
     // Trigger the animation after a delay
     const animationTimeout = setTimeout(() => {
       setAnimate(true);
-    }, 3000); // Adjust the delay as needed
+    }, 2000); // Adjust the delay as needed
 
     return () => {
       clearTimeout(animationTimeout);
@@ -39,6 +39,34 @@ export default function HomePage(){
     useEffect(() => {
         setJobTitle(jobTitles[currentTitleIndex]);
       }, [currentTitleIndex]);
+
+
+
+      //color fliper
+      let hex = [1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+
+
+
+
+function randomIndex(){
+    let index = Math.floor(Math.random()*15);
+   let hexElement = hex[index];
+   return hexElement;
+}
+
+
+function bgChange() {
+    let hexCode = "#";
+   for(let i = 0;i<6;i++){
+     hexCode +=randomIndex();
+   }
+   console.log(hexCode)
+   wrap.style.backgroundColor = hexCode;
+   hexColor.innerText = hexCode;
+   hexColor.style.color = hexCode;
+  }  
+
+btn.addEventListener('click',bgChange)
     
     return(
        <MainDiv>
@@ -51,10 +79,10 @@ export default function HomePage(){
          
              
           {hi? 
-                  <><div className="container d-flex justify-content-center align-items-center bg-smokewhite text-dark">
+                  <><div className="container d-flex justify-content-start align-items-center bg-smokewhite text-dark">
 
             <AnimatedText animate={animate} className='mb-5'>
-              <h1 className='name'>Gavaskar Kathirvel</h1>
+              <h1 className='name ml-3 border-bottom border-bottom-lg'>Gavaskar Kathirvel</h1>
 
             </AnimatedText>
             </div>
@@ -67,7 +95,13 @@ export default function HomePage(){
            <h1></h1>
           }
     
-            
+            <div>
+            <div class="wraper">
+        <button  class="btn btn-outline-primary border border-rounded">
+            click me
+        </button>
+    </div>
+            </div>
          
          
        </MainDiv>
