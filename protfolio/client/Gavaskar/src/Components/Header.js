@@ -1,21 +1,27 @@
-import { useState } from "react";
-import { FaHamburger,FaDoorClosed,FaDoorOpen } from 'react-icons/fa';
+import { useEffect, useState } from "react";
+import { FaDoorClosed,FaDoorOpen,FaUpload } from 'react-icons/fa';
 
 import styled from "styled-components";
 function Header(){
   const [showMenu,setShowMenu] = useState(false);
   const [open,setOpen] = useState(false);
 
+  function scrollToPosition(x, y) {
+    // Use window.scrollTo to scroll to the specified position (x, y)
+    window.scrollTo(x, y);
+  }
+
+
   function openMenuList() {
     setShowMenu(prevShowMenu => !prevShowMenu);
     setOpen(prevOpen => !prevOpen);
   }
    return(
-    <MainDiv>
+    <MainDiv className="border border-2 shadow-lg mt-0 ">
        
-        <ul className={showMenu ? 'showMenu' : ''}>
+        <ul className={showMenu ? 'showMenu' : ' mt-2'}>
         
-           <li>Projects</li>
+           <li onClick={() =>{scrollToPosition(0, 600)}}>Projects</li>
            <li>About Me</li>
            <li>Contact Me</li>
         </ul>
@@ -38,7 +44,7 @@ const MainDiv = styled.div`
 width: 100%;
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: center;
 
 .logo {
   font-size:36px;

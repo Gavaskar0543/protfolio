@@ -7,6 +7,9 @@ export default function HomePage(){
     const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
     const [jobTitle, setJobTitle] = useState(jobTitles[currentTitleIndex]);
     const [animate, setAnimate] = useState(false);
+    const [background, setBackground] = useState('#ffffff');
+    const [color,setColor] = useState('black');
+
     setTimeout(() => {
       setHi(true);
     }, 2000);
@@ -18,7 +21,7 @@ export default function HomePage(){
     // Trigger the animation after a delay
     const animationTimeout = setTimeout(() => {
       setAnimate(true);
-    }, 2000); // Adjust the delay as needed
+    }, 3000); // Adjust the delay as needed
 
     return () => {
       clearTimeout(animationTimeout);
@@ -60,14 +63,12 @@ function bgChange() {
    for(let i = 0;i<6;i++){
      hexCode +=randomIndex();
    }
-   console.log(hexCode)
-   wrap.style.backgroundColor = hexCode;
-   hexColor.innerText = hexCode;
-   hexColor.style.color = hexCode;
+   setBackground(hexCode);
+   setColor('white');
+  
+ 
   }  
 
-btn.addEventListener('click',bgChange)
-    
     return(
        <MainDiv>
          
@@ -81,8 +82,13 @@ btn.addEventListener('click',bgChange)
           {hi? 
                   <><div className="container d-flex justify-content-start align-items-center bg-smokewhite text-dark">
 
-            <AnimatedText animate={animate} className='mb-5'>
-              <h1 className='name ml-3 border-bottom border-bottom-lg'>Gavaskar Kathirvel</h1>
+            <AnimatedText animate={animate} className='mb-5 d-flex justify-content-around align-items-center'>
+              <div>
+              <img src={'../../../assets/user.jpeg'} className='shadow-inset' width={100} alt='imae'/>
+              </div>
+             <div>
+             <h1 className='name ml-4  shadow-inset'>Gavaskar Kathirvel</h1>
+             </div>
 
             </AnimatedText>
             </div>
@@ -96,11 +102,7 @@ btn.addEventListener('click',bgChange)
           }
     
             <div>
-            <div class="wraper">
-        <button  class="btn btn-outline-primary border border-rounded">
-            click me
-        </button>
-    </div>
+        
             </div>
          
          
@@ -108,10 +110,13 @@ btn.addEventListener('click',bgChange)
     );
 }
 
+
+
 const MainDiv = styled.div`
 height:100vh;
 display:flex;
-margin-left:10%;
+margin-left:5%;
+
 
 flex-direction:column;
 align-items:flex-start;
@@ -135,10 +140,6 @@ justify-content:center;
 overflow: hidden;
 
 `;
-
-
-
-
 const AnimatedText = styled.div`
   font-size: 24px;
   white-space: nowrap; /* Prevent text from wrapping */
