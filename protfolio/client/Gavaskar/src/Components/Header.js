@@ -7,9 +7,28 @@ function Header(){
   const [open,setOpen] = useState(false);
 
   function scrollToPosition(x, y) {
-    // Use window.scrollTo to scroll to the specified position (x, y)
-    window.scrollTo(x, y);
+    const duration = 500;
+  const startTime = performance.now();
+  const startY = window.scrollY;
+  const distance = y - startY;
+
+  function scrollStep(timestamp) {
+    const progress = (timestamp - startTime) / duration;
+    if (progress < 1) {
+      window.scrollTo(0, startY + distance * progress);
+      window.requestAnimationFrame(scrollStep);
+    } else {
+      window.scrollTo(0, y); // Ensure the final position is reached
+    }
   }
+
+  window.requestAnimationFrame(scrollStep);
+}
+
+
+
+
+
 
 
   function openMenuList() {
@@ -21,9 +40,9 @@ function Header(){
        
         <ul className={showMenu ? 'showMenu' : ' mt-2'}>
         
-           <li onClick={() =>{scrollToPosition(0, 600)}}>Projects</li>
-           <li>About Me</li>
-           <li>Contact Me</li>
+           <li onClick={() =>{scrollToPosition(0, 680)}}>Projects</li>
+           <li onClick={() =>{scrollToPosition(0,1280)}}>About Me</li>
+           <li  onClick={() =>{scrollToPosition(0,1870)}}>Contact Me</li>
         </ul>
         <div onClick={openMenuList} className='menu'>
          {open ? 
