@@ -7,7 +7,7 @@
 
 .section-heading span{
     font-size: 40px;
-    color:#2857a4;
+    color:#b953a4;
     display: inline-block;
     padding-top:10px;
     margin-right:0.5rem;
@@ -16,30 +16,30 @@
 
 .skills-display{
     width:70%;
-    height: 100px;
-   
     display: flex;
     flex-wrap: wrap;
+    gap:2rem;
     justify-content: space-between;
 }
 .skill-progress>div{
     border-radius: 20px 0px 0px 20px;
 }
 .skill-progress{
-    width:10rem;
+    width:8rem;
     height:2.4rem;
     background-color: lightgray;
     border-radius:0.8rem;
 
 }
-.skill-name span i{
+.skill-name  {
     color:white;
-    padding-top:2px;
-    font-size: 1.2rem;
-     font-weight: 700;
-     z-index: 1000;
-    margin-left: 10px;
+    padding:6px 0px 10px 20px;
+    font-size:15px;
    
+   
+}
+.skill-name span{
+    margin:0;
 }
 .mb75px{
     margin-bottom: 75px;
@@ -48,6 +48,63 @@
     width:85%;
     height:inherit;
 }
+.eighty-five{
+    width:85%;
+    height:inherit;
+}
+.eighty-five{
+    width:85%;
+    height:inherit;
+}
+.ninty{
+    width:90%;
+    height:inherit;
+
+}
+.seventy-five{
+    width:75%;
+    height:inherit;
+}
+.eighty-five{
+    width:85%;
+    height:inherit;
+}
+.hundered{
+    width:100%;
+    height:inherit;
+
+}
 .bg-blue{
     background-color: blue;
+}
+.bg-pink{
+    background-color: pink;
+}
+.bg-green{
+    background-color: green;
+}
+.bg-orange{
+    background-color: orange;
+}
+.bg-yellow{
+    background-color: yellow;
+}
+.bg-red{
+    background-color: red;
+}
+.bg-brown{
+    background-color: brown;
+}
+
+.bg-black{
+    background-color: black;
+}
+.bg-midnight{
+    background-color: midnightblue;
+}
+.bg-violet{
+    background-color: violet;
+}
+.bg-gold{
+background-color: gold;
 }

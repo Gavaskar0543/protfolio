@@ -1,0 +1,54 @@
+#time-line{
+position: relative;
+width:75%;
+border :1px solid;
+}
+.timeline-box{
+    position: relative;
+    width:40%;
+    margin:5px;
+    left:5%;
+    min-height: 150px;
+    border:2px solid;
+}
+.timeline-box:nth-child(2n){
+    left:53%;
+}
+.timeline-box:nth-child(2n+1):after{
+    content: '';
+    position: absolute;
+    height: 0.5rem;
+    width:0.5rem;
+    top:25%;
+    right:-12.2%;
+    background-color: red;
+    border-radius: 50%;
+    z-index:1000;
+}
+.timeline-box:nth-child(2n):after{
+    content: '';
+    position: absolute;
+    height: 0.5rem;
+    width:0.5rem;
+    top:25%;
+    left:-10%;
+    background-color:green;
+    border-radius: 50%;
+    z-index:1000;
+}
+.time-line-divider{
+    position:absolute;
+   height:75vh;
+    width:0;
+    border:2px dashed lightgreen;
+   top:10px;
+   left:50%;
+}
+
+.time-line-traveler{
+    position: sticky;
+    top:30%;
+    rotate: 90deg;
+    z-index: 1500;
+    color:lightblue;
+}
