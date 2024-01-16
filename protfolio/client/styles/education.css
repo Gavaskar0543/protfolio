@@ -21,7 +21,7 @@ border :1px solid;
     width:0.5rem;
     top:25%;
     right:-12.2%;
-    background-color: red;
+    background-color: lightpink;
     border-radius: 50%;
     z-index:1000;
 }
@@ -32,13 +32,13 @@ border :1px solid;
     width:0.5rem;
     top:25%;
     left:-10%;
-    background-color:green;
+    background-color:lightblue;
     border-radius: 50%;
     z-index:1000;
 }
 .time-line-divider{
     position:absolute;
-   height:75vh;
+   height:83vh;
     width:0;
     border:2px dashed lightgreen;
    top:10px;
@@ -47,7 +47,7 @@ border :1px solid;
 
 .time-line-traveler{
     position: sticky;
-    top:30%;
+    top:20%;
     rotate: 90deg;
     z-index: 1500;
     color:lightblue;

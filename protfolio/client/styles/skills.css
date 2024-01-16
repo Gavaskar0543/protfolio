@@ -22,7 +22,7 @@
     justify-content: space-between;
 }
 .skill-progress>div{
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 10px 0px 0px 10px;
 }
 .skill-progress{
     width:8rem;
@@ -68,6 +68,7 @@
 .eighty-five{
     width:85%;
     height:inherit;
+    transition: width 0.2s ease-in;
 }
 .hundered{
     width:100%;
