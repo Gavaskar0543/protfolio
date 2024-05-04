@@ -52,3 +52,29 @@ width:75%;
     z-index: 1500;
     color:lightblue;
 }
+
+
+.project-categroy{
+    width:100vw;
+    border:2px solid black;
+}
+.project-categroy ul{
+    display: flex;
+    justify-content: center;
+}
+
+.project-categroy ul li{
+    display: inline-block;
+    margin-left: 25px;
+    align-items: center;
+   cursor: pointer;
+    font-size: large;
+}
+
+
+.selected-btn{
+    border-bottom: 2px solid red;
+}
+.unselected-btn{
+    border: none;
+}
