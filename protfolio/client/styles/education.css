@@ -73,7 +73,11 @@ width:75%;
 
 
 .selected-btn{
+    color:red;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     border-bottom: 2px solid red;
+    font-weight: bolder;
+    font-size: monospace;
 }
 .unselected-btn{
     border: none;

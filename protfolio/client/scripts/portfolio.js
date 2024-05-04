@@ -1,3 +1,23 @@
+
+const frontend = [{
+  name:"Imdb-clone",
+  github:'https://github.com/Gavaskar0543/imdb-clone',
+  hosted:''
+},
+
+{
+  name:"Chya Mart",
+  github:'https://github.com/Gavaskar0543/imdb-clone',
+  hosted:''
+}
+,
+{
+  name:"Todo",
+  github:'https://github.com/Gavaskar0543/imdb-clone',
+  hosted:''
+}
+
+]
 function skillbarprogress(){
     let skillbars = document.querySelectorAll('.eighty-five');
 let interval = setInterval(myFunction, 100);
